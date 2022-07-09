@@ -3,8 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-warning-alert',
   templateUrl: './warning-alert.component.html',
-  //styleUrls: ['./app.component.css']
-  styles: ['p { color: yellow; }']
+  styleUrls: ['./warning-alert.component.css']
 })
 export class WarningAlertComponent implements OnInit {
 
