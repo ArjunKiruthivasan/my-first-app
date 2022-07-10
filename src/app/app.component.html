@@ -8,17 +8,26 @@
     </div>
     <div class="row">
         <h2>First Assignment</h2>
-        <br>
         <app-success-alert></app-success-alert>
         <app-warning-alert></app-warning-alert>
     <div class="row">
         <h2>Second Assignment</h2>
-        <br>
         <input type="text" class="form-control" [(ngModel)] = "username">
         <p>{{ username }}</p>
         <button 
             class="btn btn-primary" 
             [disabled]="username === ''"
             (click)="resetUsername()">Reset User</button>
+    </div>
+    <div class="row">
+        <h2>Third Assignment</h2>
+       <!-- <button class="btn btn-primary" (click)="showSecret = !showSecret">Display Details</button> -->
+        <button class="btn btn-primary" (click)="onToggleDetails()">Display Details</button>
+        <p *ngIf="showSecret">Secret password = tuna</p>
+        <div *ngFor="let logItem of log; let i = index"
+            [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'transparent'}"
+            [ngClass]="{'logWhite': i >= 4}">
+            {{ logItem }}
+        </div>
     </div>
 </div>
